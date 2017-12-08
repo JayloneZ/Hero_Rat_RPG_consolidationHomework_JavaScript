@@ -26,4 +26,11 @@ Hero.prototype.eat = function (food) {
 	};
 };
 
+Hero.prototype.sortQuestsBy = function (metric) {
+	const sortedQuests = _.sortBy(this.quests, function (quest) {
+		return quest.metric;
+	});
+	this.quests = sortedQuests.reverse();
+};
+
 module.exports = Hero;

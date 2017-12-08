@@ -62,4 +62,19 @@ describe('Hero', function () {
 		hero.eat(oats);
 		assert.strictEqual(hero.health, 95);
 	});
+
+	it('should be able to sort quests by difficulty', function () {
+		hero.sortQuestsBy('difficulty');
+		assert.deepEqual(hero.quests, [quest2, quest1]);
+	});
+
+	it('should be able to sort quests by urgency', function () {
+		hero.sortQuestsBy('urgency');
+		assert.deepEqual(hero.quests, [quest2, quest1]);
+	});
+
+	it('should be able to sort quests by reward', function () {
+		hero.sortQuestsBy('reward');
+		assert.deepEqual(hero.quests, [quest2, quest1]);
+	});
 });
