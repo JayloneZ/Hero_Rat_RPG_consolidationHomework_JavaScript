@@ -11,4 +11,12 @@ Hero.prototype.talk = function (string) {
 	return string;
 };
 
+Hero.prototype.setHealth = function (health) {
+	this.health = health;
+};
+
+Hero.prototype.eat = function (food) {
+	this.health += food.replenishment;
+};
+
 module.exports = Hero;

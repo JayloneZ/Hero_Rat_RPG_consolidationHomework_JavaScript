@@ -13,7 +13,7 @@ describe('Hero', function () {
 		assert.strictEqual(grains.name, 'grains');
 	});
 
-	it('should have favorite food', function () {
+	it('should have a replenishment value', function () {
 		assert.strictEqual(grains.replenishment, 20);
 	});
 });
