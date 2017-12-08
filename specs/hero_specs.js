@@ -33,5 +33,4 @@ describe('Hero', function () {
 	it('should have quests to complete', function () {
 		assert.deepEqual(hero.quests, [quest1, quest2]);
 	});
-
 });
