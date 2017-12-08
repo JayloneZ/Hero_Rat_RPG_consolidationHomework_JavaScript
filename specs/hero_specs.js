@@ -33,4 +33,8 @@ describe('Hero', function () {
 	it('should have quests to complete', function () {
 		assert.deepEqual(hero.quests, [quest1, quest2]);
 	});
+
+	it('should be able to talk', function () {
+		assert.strictEqual(hero.talk('10km run, 100 push-ups, 100 sit-ups'), '10km run, 100 push-ups, 100 sit-ups');
+	});
 });
