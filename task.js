@@ -5,3 +5,5 @@ const Task = function (difficulty, urgency, reward) {
 	this.reward = reward;
 	this.completed = 0;
 };
+
+module.exports = Task;
