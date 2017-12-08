@@ -16,4 +16,8 @@ describe('Food', function () {
 	it('should have a replenishment value', function () {
 		assert.strictEqual(grains.replenishment, 20);
 	});
+
+	it('should be unpoisoned by default', function () {
+		assert.strictEqual(grains.poisonous, false);
+	});
 });
