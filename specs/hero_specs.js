@@ -50,4 +50,10 @@ describe('Hero', function () {
 		hero.eat(chocolate);
 		assert.strictEqual(hero.health, 80);
 	});
+
+	it('should have a health value that does not exceed 100', function () {
+		hero.setHealth(90);
+		hero.eat(chocolate);
+		assert.strictEqual(hero.health, 100);
+	});
 });

@@ -17,6 +17,9 @@ Hero.prototype.setHealth = function (health) {
 
 Hero.prototype.eat = function (food) {
 	this.health += food.replenishment;
+	if (this.health > 100) {
+		this.health = 100;
+	};
 };
 
 module.exports = Hero;
