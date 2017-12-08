@@ -77,4 +77,13 @@ describe('Hero', function () {
 		hero.sortQuestsBy('reward');
 		assert.deepEqual(hero.quests, [quest2, quest1]);
 	});
+
+	it('should be able to sort quests by completed', function () {
+		quest1.setCompleted(true);
+		assert.deepEqual(hero.sortCompleted(true), [quest1]);
+	});
+
+	it('should be able to sort quests by uncompleted', function () {
+		assert.deepEqual(hero.sortCompleted(false), [quest1, quest2]);
+	});
 });

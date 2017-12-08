@@ -33,4 +33,10 @@ Hero.prototype.sortQuestsBy = function (metric) {
 	this.quests = sortedQuests.reverse();
 };
 
+Hero.prototype.sortCompleted = function (boolean) {
+	return _.filter(this.quests, function (quest) {
+		return quest.completed === boolean;
+	});
+};
+
 module.exports = Hero;
