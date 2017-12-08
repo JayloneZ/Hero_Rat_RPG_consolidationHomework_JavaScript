@@ -1,7 +1,7 @@
 const assert = require('assert');
 const Food = require('../food.js');
 
-describe('Hero', function () {
+describe('Food', function () {
 	let grains;
 	let oats;
 

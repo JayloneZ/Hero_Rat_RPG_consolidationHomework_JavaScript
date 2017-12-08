@@ -1,7 +1,7 @@
 const assert = require('assert');
 const Task = require('../task.js');
 
-describe('Hero', function () {
+describe('Task', function () {
 	let quest1;
 
 	beforeEach(function () {
