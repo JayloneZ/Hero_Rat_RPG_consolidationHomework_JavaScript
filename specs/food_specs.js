@@ -14,6 +14,6 @@ describe('Hero', function () {
 	});
 
 	it('should have favorite food', function () {
-		assert.deepEqual(grains.replenishment, 20);
+		assert.strictEqual(grains.replenishment, 20);
 	});
 });
