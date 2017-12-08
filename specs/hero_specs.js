@@ -2,6 +2,7 @@ const assert = require('assert');
 const Hero = require('../hero.js');
 const Food = require('../food.js');
 const Task = require('../task.js');
+const Rat = require('../rat.js');
 
 describe('Hero', function () {
 	let grains;
@@ -10,6 +11,7 @@ describe('Hero', function () {
 	let quest1;
 	let quest2;
 	let hero;
+	let rat;
 
 	beforeEach(function () {
 		grains = new Food('grains', 20);
@@ -18,6 +20,7 @@ describe('Hero', function () {
 		quest1 = new Task(3, 2, 300);
 		quest2 = new Task(5, 5, 500);
 		hero = new Hero('One-Punch', [grains, oats], [quest1, quest2]);
+		rat = new Rat();
 	});
 
 	it('should have a name', function () {
@@ -85,5 +88,11 @@ describe('Hero', function () {
 
 	it('should be able to sort quests by uncompleted', function () {
 		assert.deepEqual(hero.sortCompleted(false), [quest1, quest2]);
+	});
+
+	it('should lose health when eating poisonous food', function () {
+		rat.poison(oats);
+		hero.eat(oats);
+		assert.strictEqual(hero.health, 80);
 	});
 });
