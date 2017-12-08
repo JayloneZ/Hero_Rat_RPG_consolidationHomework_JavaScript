@@ -19,4 +19,13 @@ describe('Hero', function () {
 	it('should have a reward', function () {
 		assert.strictEqual(quest1.reward, 300);
 	});
+
+	it('should have completed set to false', function () {
+		assert.strictEqual(quest1.completed, false);
+	});
+
+	it('should change completed value', function () {
+		quest1.setCompleted();
+		assert.strictEqual(quest1.completed, true);
+	});
 });
