@@ -16,7 +16,11 @@ Hero.prototype.setHealth = function (health) {
 };
 
 Hero.prototype.eat = function (food) {
-	this.health += food.replenishment;
+	let foodValue = food.replenishment;
+	if (_.includes(this.favoriteFood, food)) {
+		foodValue *= 1.5;
+	};
+	this.health += foodValue;
 	if (this.health > 100) {
 		this.health = 100;
 	};

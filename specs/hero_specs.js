@@ -56,4 +56,10 @@ describe('Hero', function () {
 		hero.eat(chocolate);
 		assert.strictEqual(hero.health, 100);
 	});
+
+	it('should increase health value by 1.5 times when eating favorite food', function () {
+		hero.setHealth(50);
+		hero.eat(oats);
+		assert.strictEqual(hero.health, 95);
+	});
 });
